@@ -1,0 +1,1121 @@
+/*Foto de fondo*/
+body{
+    background-image: url(Fotos_Quizz/Fondo_Quizz.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+
+
+/*Menu del juego*/
+#Menu {display: grid;
+    height: 100%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    grid-template-columns: 100%;
+    grid-template-rows: 4% 16% 50% 8% 10% 10%;
+    grid-template-areas: "vacio"
+                         "arriba"
+                         "medio"
+                         "vacio2"
+                         "abajo"
+                         "vacio3";
+}
+
+#Menu_Arriba {
+    grid-area: arriba;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+#Menu_h1 {
+    font-size: 600%;
+    color: rgb(226, 43, 223);
+    margin: 0;
+}
+
+#Menu_Medio {
+    grid-area: medio;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 100%;
+    grid-template-areas: "no mono none";
+}
+#Menu_Mono {
+    grid-area: mono;
+    display: grid;
+    height: 99%;
+    width: 95%;
+}
+
+#Menu_Abajo {
+    grid-area: abajo;
+    display: grid;
+    grid-template-columns: 30% 20% 20% 30%;
+    grid-template-areas: "Abajo1 Abajo2 Abajo2 Abajo3";
+}
+#Menu_button {
+    grid-area: Abajo2;
+    border-radius: 40%;
+    background-color: aqua;
+    color: rgb(226, 43, 223);
+    border: 3px solid black;
+}
+#Menu_button:hover {
+    background-color: rgb(226, 43, 223);
+    color: white;
+}
+
+
+
+/*Level 1*/
+#Level1 {
+    display: grid;
+    height: 100%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "level_arriba"
+                         "level_abajo";
+}
+
+#Parte_arriba1 {
+    grid-area: level_arriba;
+    display: grid;
+    grid-template-columns: 20% 62% 20%;
+    grid-template-rows: 15% 37% 37% 3% 7%;
+    grid-template-areas: "vacio vacio vacio"
+                         "vacio1 pregunta1 vacio2"
+                         "vacio1 foto1 vacio2"
+                         "vacio1 vacio3 vacio2"
+                         "vacio1 timer vacio2";
+}
+
+/*Timer*/
+#Tiempo_level1 {
+    grid-area: timer;
+    background-color: rgb(90, 84, 84);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 9.5% 9% 9% 9% 9% 9% 9% 9% 9% 9% 9.5%;
+    grid-template-rows: 100%;
+    grid-template-areas: "timer1 timer2 timer3 timer4 timer5 timer6 timer7 timer8 timer9 timer10 timer11";
+}
+#Seg1_level1 {
+    grid-area: timer1;
+    border-radius: 10px 0px 0px 10px;
+}
+#Seg2_level1 {
+    grid-area: timer2;
+}
+#Seg3_level1 {
+    grid-area: timer3;
+}
+#Seg4_level1 {
+    grid-area: timer4;
+}
+#Seg5_level1 {
+    grid-area: timer5;
+}
+#Seg6_level1 {
+    grid-area: timer6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#Seg6_level1 > p {
+    margin: 0%;
+    
+}
+#Seg7_level1 {
+    grid-area: timer7;
+}
+#Seg8_level1 {
+    grid-area: timer8;
+}
+#Seg9_level1 {
+    grid-area: timer9;
+}
+#Seg10_level1 {
+    grid-area: timer10;
+}
+#Seg11_level1 {
+    grid-area: timer11;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#Pregunta_level1 {
+    grid-area: pregunta1;
+    border-radius: 10px 10px 0px 0px;
+    font-size: 3vh;
+    background-color: black;
+    color: rgb(226, 43, 223);
+    border: 4px solid black;
+}
+#Foto_level1 {
+    grid-area: foto1;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 99%;
+    width: 99.2%;
+    border-radius: 0px 0px 10px 10px;
+    border: 4px solid black;
+}
+
+#Parte_abajo1 {
+    grid-area: level_abajo;
+    display: grid;
+    grid-template-columns: 12% 35% 6% 35% 12%;
+    grid-template-rows: 10% 30% 10% 30% 10%;
+    grid-template-areas: "vacio3 vacio3 vacio3 vacio3 vacio3"
+                         "vacio4 respuesta1 vacio5 respuesta2 vacio6"
+                         "vacio4 vacio7 vacio5 vacio8 vacio6"
+                         "vacio4 respuesta3 vacio5 respuesta4 vacio6"
+                         "vacio4 vacio9 vacio5 vacio10 vacio6";
+}
+
+#Level1_Respuesta1 {
+    grid-area: respuesta1;
+}
+#Level1_Respuesta2 {
+    grid-area: respuesta2;
+}
+#Level1_Respuesta3 {
+    grid-area: respuesta3;
+}
+#Level1_Respuesta4 {
+    grid-area: respuesta4;
+}
+.Respuestas1 {
+    border-radius: 10px;
+    background-color: aqua;
+    color: rgb(226, 43, 223);
+    font-size: 150%;
+}
+
+.Respuestas1:hover {
+    background-color: rgb(226, 43, 223);
+    color: white;
+}
+#Level1 {
+    display: none; /*Para que no se muestre el nivel 1 junto al menu*/
+}
+
+
+/*Level 2*/
+#Level2 {
+    display: grid;
+    height: 100%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "level_arriba"
+                         "level_abajo";
+}
+
+#Parte_arriba2 {
+    grid-area: level_arriba;
+    display: grid;
+    grid-template-columns: 20% 62% 20%;
+    grid-template-rows: 15% 37% 37% 3% 7%;
+    grid-template-areas: "vacio vacio vacio"
+                         "vacio1 pregunta1 vacio2"
+                         "vacio1 foto1 vacio2"
+                         "vacio1 vacio3 vacio2"
+                         "vacio1 timer vacio2";
+}
+
+/*Timer 2*/
+#Tiempo_level2 {
+    grid-area: timer;
+    background-color: rgb(90, 84, 84);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 9.5% 9% 9% 9% 9% 9% 9% 9% 9% 9% 9.5%;
+    grid-template-rows: 100%;
+    grid-template-areas: "timer1 timer2 timer3 timer4 timer5 timer6 timer7 timer8 timer9 timer10 timer11";
+}
+#Seg1_level2 {
+    grid-area: timer1;
+    border-radius: 10px 0px 0px 10px;
+}
+#Seg2_level2 {
+    grid-area: timer2;
+}
+#Seg3_level2 {
+    grid-area: timer3;
+}
+#Seg4_level2 {
+    grid-area: timer4;
+}
+#Seg5_level2 {
+    grid-area: timer5;
+}
+#Seg6_level2 {
+    grid-area: timer6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#Seg6_level2 > p {
+    margin: 0%;
+    
+}
+#Seg7_level2 {
+    grid-area: timer7;
+}
+#Seg8_level2 {
+    grid-area: timer8;
+}
+#Seg9_level2 {
+    grid-area: timer9;
+}
+#Seg10_level2 {
+    grid-area: timer10;
+}
+#Seg11_level2 {
+    grid-area: timer11;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#Pregunta_level2 {
+    grid-area: pregunta1;
+    border-radius: 10px 10px 0px 0px;
+    font-size: 3vh;
+    background-color: black;
+    color: rgb(226, 43, 223);
+    border: 4px solid black;
+}
+#Foto_level2 {
+    grid-area: foto1;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 99%;
+    width:99.2%;
+    border-radius: 0px 0px 10px 10px;
+    border: 4px solid black;
+}
+
+#Parte_abajo2 {
+    grid-area: level_abajo;
+    display: grid;
+    grid-template-columns: 12% 35% 6% 35% 12%;
+    grid-template-rows: 10% 30% 10% 30% 10%;
+    grid-template-areas: "vacio3 vacio3 vacio3 vacio3 vacio3"
+                         "vacio4 respuesta1 vacio5 respuesta2 vacio6"
+                         "vacio4 vacio7 vacio5 vacio8 vacio6"
+                         "vacio4 respuesta3 vacio5 respuesta4 vacio6"
+                         "vacio4 vacio9 vacio5 vacio10 vacio6";
+}
+#Level2_Respuesta1 {
+    grid-area: respuesta1;
+}
+#Level2_Respuesta2 {
+    grid-area: respuesta2;
+}
+#Level2_Respuesta3 {
+    grid-area: respuesta3;
+}
+#Level2_Respuesta4 {
+    grid-area: respuesta4;
+}
+.Respuestas2 {
+    border-radius: 10px;
+    background-color: aqua;
+    color: rgb(226, 43, 223);
+    font-size: 150%;
+}
+.Respuestas2:hover {
+    background-color: rgb(226, 43, 223);
+    color: white;
+}
+#Level2{
+    display: none; /*Para que no se muestre el nivel 2 junto al menu*/
+}
+
+
+
+/*Level 3*/
+#Level3 {
+    display: grid;
+    height: 100%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "level_arriba"
+                         "level_abajo";
+}
+
+#Parte_arriba3 {
+    grid-area: level_arriba;
+    display: grid;
+    grid-template-columns: 20% 62% 20%;
+    grid-template-rows: 15% 37% 37% 3% 7%;
+    grid-template-areas: "vacio vacio vacio"
+                         "vacio1 pregunta1 vacio2"
+                         "vacio1 foto1 vacio2"
+                         "vacio1 vacio3 vacio2"
+                         "vacio1 timer vacio2";
+}
+
+/*Timer 3*/
+#Tiempo_level3 {
+    grid-area: timer;
+    background-color: rgb(90, 84, 84);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 9.5% 9% 9% 9% 9% 9% 9% 9% 9% 9% 9.5%;
+    grid-template-rows: 100%;
+    grid-template-areas: "timer1 timer2 timer3 timer4 timer5 timer6 timer7 timer8 timer9 timer10 timer11";
+}
+#Seg1_level3 {
+    grid-area: timer1;
+    border-radius: 10px 0px 0px 10px;
+}
+#Seg2_level3 {
+    grid-area: timer2;
+}
+#Seg3_level3 {
+    grid-area: timer3;
+}
+#Seg4_level3 {
+    grid-area: timer4;
+}
+#Seg5_level3 {
+    grid-area: timer5;
+}
+#Seg6_level3 {
+    grid-area: timer6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#Seg6_level3 > p {
+    margin: 0%;
+}
+#Seg7_level3 {
+    grid-area: timer7;
+}
+#Seg8_level3 {
+    grid-area: timer8;
+}
+#Seg9_level3 {
+    grid-area: timer9;
+}
+#Seg10_level3 {
+    grid-area: timer10;
+}
+#Seg11_level3 {
+    grid-area: timer11;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#Pregunta_level3 {
+    grid-area: pregunta1;
+    border-radius: 10px 10px 0px 0px;
+    font-size: 3vh;
+    background-color: black;
+    color: rgb(226, 43, 223);
+    border: 4px solid black;
+}
+#Foto_level3 {
+    grid-area: foto1;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 99%;
+    width: 99.2%;
+    border-radius: 0px 0px 10px 10px;
+    border: 4px solid black;
+}
+
+#Parte_abajo3 {
+    grid-area: level_abajo;
+    display: grid;
+    grid-template-columns: 12% 35% 6% 35% 12%;
+    grid-template-rows: 10% 30% 10% 30% 10%;
+    grid-template-areas: "vacio3 vacio3 vacio3 vacio3 vacio3"
+                         "vacio4 respuesta1 vacio5 respuesta2 vacio6"
+                         "vacio4 vacio7 vacio5 vacio8 vacio6"
+                         "vacio4 respuesta3 vacio5 respuesta4 vacio6"
+                         "vacio4 vacio9 vacio5 vacio10 vacio6";
+}
+#Level3_Respuesta1 {
+    grid-area: respuesta1;
+}
+#Level3_Respuesta2 {
+    grid-area: respuesta2;
+}
+#Level3_Respuesta3 {
+    grid-area: respuesta3;
+}
+#Level3_Respuesta4 {
+    grid-area: respuesta4;
+}
+.Respuestas3 {
+    border-radius: 10px;
+    background-color: aqua;
+    color: rgb(226, 43, 223);
+    font-size: 150%;
+}
+.Respuestas3:hover {
+    background-color: rgb(226, 43, 223);
+    color: white;
+}
+#Level3{
+    display: none; /*Para que no se muestre el nivel 3 junto al menu*/
+}
+
+
+
+/*Level 4*/
+#Level4 {
+    display: grid;
+    height: 100%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "level_arriba"
+                         "level_abajo";
+}
+
+#Parte_arriba4 {
+    grid-area: level_arriba;
+    display: grid;
+    grid-template-columns: 20% 62% 20%;
+    grid-template-rows: 15% 37% 37% 3% 7%;
+    grid-template-areas: "vacio vacio vacio"
+                         "vacio1 pregunta1 vacio2"
+                         "vacio1 foto1 vacio2"
+                         "vacio1 vacio3 vacio2"
+                         "vacio1 timer vacio2";
+}
+
+/*Timer 4*/
+#Tiempo_level4 {
+    grid-area: timer;
+    background-color: rgb(90, 84, 84);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 9.5% 9% 9% 9% 9% 9% 9% 9% 9% 9% 9.5%;
+    grid-template-rows: 100%;
+    grid-template-areas: "timer1 timer2 timer3 timer4 timer5 timer6 timer7 timer8 timer9 timer10 timer11";
+}
+#Seg1_level4 {
+    grid-area: timer1;
+    border-radius: 10px 0px 0px 10px;
+}
+#Seg2_level4 {
+    grid-area: timer2;
+}
+#Seg3_level4 {
+    grid-area: timer3;
+}
+#Seg4_level4 {
+    grid-area: timer4;
+}
+#Seg5_level4 {
+    grid-area: timer5;
+}
+#Seg6_level4 {
+    grid-area: timer6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#Seg6_level4 > p {
+    margin: 0%;
+}
+#Seg7_level4 {
+    grid-area: timer7;
+}
+#Seg8_level4 {
+    grid-area: timer8;
+}
+#Seg9_level4 {
+    grid-area: timer9;
+}
+#Seg10_level4 {
+    grid-area: timer10;
+}
+#Seg11_level4 {
+    grid-area: timer11;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#Pregunta_level4 {
+    grid-area: pregunta1;
+    border-radius: 10px 10px 0px 0px;
+    font-size: 3vh;
+    background-color: black;
+    color: rgb(226, 43, 223);
+    border: 4px solid black;
+}
+#Foto_level4 {
+    grid-area: foto1;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 99%;
+    width: 99.2%;
+    border-radius: 0px 0px 10px 10px;
+    border: 4px solid black;
+}
+
+#Parte_abajo4 {
+    grid-area: level_abajo;
+    display: grid;
+    grid-template-columns: 12% 35% 6% 35% 12%;
+    grid-template-rows: 10% 30% 10% 30% 10%;
+    grid-template-areas: "vacio3 vacio3 vacio3 vacio3 vacio3"
+                         "vacio4 respuesta1 vacio5 respuesta2 vacio6"
+                         "vacio4 vacio7 vacio5 vacio8 vacio6"
+                         "vacio4 respuesta3 vacio5 respuesta4 vacio6"
+                         "vacio4 vacio9 vacio5 vacio10 vacio6";
+}
+#Level4_Respuesta1 {
+    grid-area: respuesta1;
+}
+#Level4_Respuesta2 {
+    grid-area: respuesta2;
+}
+#Level4_Respuesta3 {
+    grid-area: respuesta3;
+}
+#Level4_Respuesta4 {
+    grid-area: respuesta4;
+}
+.Respuestas4 {
+    border-radius: 10px;
+    background-color: aqua;
+    color: rgb(226, 43, 223);
+    font-size: 150%;
+}
+
+.Respuestas4:hover {
+    background-color: rgb(226, 43, 223);
+    color: white;
+}
+#Level4{
+    display: none; /*Para que no se muestre el nivel 4 junto al menu*/
+}
+
+
+/*Level 5*/
+#Level5 {
+    display: grid;
+    height: 100%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "level_arriba"
+                         "level_abajo";
+}
+
+#Parte_arriba5 {
+    grid-area: level_arriba;
+    display: grid;
+    grid-template-columns: 20% 62% 20%;
+    grid-template-rows: 15% 37% 37% 3% 7%;
+    grid-template-areas: "vacio vacio vacio"
+                         "vacio1 pregunta1 vacio2"
+                         "vacio1 foto1 vacio2"
+                         "vacio1 vacio3 vacio2"
+                         "vacio1 timer vacio2";
+}
+
+/*Timer 5*/
+#Tiempo_level5 {
+    grid-area: timer;
+    background-color: rgb(90, 84, 84);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 9.5% 9% 9% 9% 9% 9% 9% 9% 9% 9% 9.5%;
+    grid-template-rows: 100%;
+    grid-template-areas: "timer1 timer2 timer3 timer4 timer5 timer6 timer7 timer8 timer9 timer10 timer11";
+}
+#Seg1_level5 {
+    grid-area: timer1;
+    border-radius: 10px 0px 0px 10px;
+}
+#Seg2_level5 {
+    grid-area: timer2;
+}
+#Seg3_level5 {
+    grid-area: timer3;
+}
+#Seg4_level5 {
+    grid-area: timer4;
+}
+#Seg5_level5 {
+    grid-area: timer5;
+}
+#Seg6_level5 {
+    grid-area: timer6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#Seg6_level5 > p {
+    margin: 0%;
+}
+#Seg7_level5 {
+    grid-area: timer7;
+}
+#Seg8_level5 {
+    grid-area: timer8;
+}
+#Seg9_level5 {
+    grid-area: timer9;
+}
+#Seg10_level5 {
+    grid-area: timer10;
+}
+#Seg11_level5 {
+    grid-area: timer11;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#Pregunta_level5 {
+    grid-area: pregunta1;
+    border-radius: 10px 10px 0px 0px;
+    font-size: 3vh;
+    background-color: black;
+    color: rgb(226, 43, 223);
+    border: 4px solid black;
+}
+#Foto_level5 {
+    grid-area: foto1;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 99%;
+    border-radius: 0px 0px 10px 10px;
+    border: 4px solid black;
+}
+
+#Parte_abajo5 {
+    grid-area: level_abajo;
+    display: grid;
+    grid-template-columns: 12% 35% 6% 35% 12%;
+    grid-template-rows: 10% 30% 10% 30% 10%;
+    grid-template-areas: "vacio3 vacio3 vacio3 vacio3 vacio3"
+                         "vacio4 respuesta1 vacio5 respuesta2 vacio6"
+                         "vacio4 vacio7 vacio5 vacio8 vacio6"
+                         "vacio4 respuesta3 vacio5 respuesta4 vacio6"
+                         "vacio4 vacio9 vacio5 vacio10 vacio6";
+}
+#Level5_Respuesta1 {
+    grid-area: respuesta1;
+}
+#Level5_Respuesta2 {
+    grid-area: respuesta2;
+}
+#Level5_Respuesta3 {
+    grid-area: respuesta3;
+}
+#Level5_Respuesta4 {
+    grid-area: respuesta4;
+}
+.Respuestas5 {
+    border-radius: 10px;
+    background-color: aqua;
+    color: rgb(226, 43, 223);
+    font-size: 84%;
+}
+
+.Respuestas5:hover {
+    background-color: rgb(226, 43, 223);
+    color: white;
+}
+#Level5{
+    display: none; /*Para que no se muestre el nivel 5 junto al menu*/
+}
+
+
+
+/*Final*/
+#Final {display: grid;
+    height: 100%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 17% 66% 17%;
+    grid-template-areas: "vacio_a vacio_a vacio_a"
+                         "vacio_m1 puntuacion vacio_m2"
+                         "vacio_b vacio_b vacio_b";
+}
+
+#Puntuacion {
+    grid-area: puntuacion;
+    display: grid;
+    grid-template-columns: 10% 35% 10% 35% 10%;
+    grid-template-rows: 20% 40% 10% 10% 5% 10% 5%;
+    grid-template-areas: "vacio_r1 resumen resumen resumen vacio_r2"
+                         "vacio_r1 correcto vacio_r4 incorrecto vacio_r2"
+                         "vacio_r1 vacio_r5 vacio_r5 vacio_r5 vacio_r2"
+                         "vacio_r1 boton_1 boton_1 boton_1 vacio_r2"
+                         "vacio_r1 vacio_r6 vacio_r6 vacio_r6 vacio_r2"
+                         "vacio_r1 boton_2 boton_2 boton_2 vacio_r2"
+                         "vacio_r1 vacio_r7 vacio_r7 vacio_r7 vacio_r2";
+    background-color: black;
+    color: rgb(226, 43, 223);
+    border-radius: 10px;
+}
+
+#Resumen {
+    grid-area: resumen;
+    text-align: center;
+    font-size: 230%;
+}
+#Puntaje_correcto {
+    grid-area: correcto;
+    background-color: aqua;
+    border-radius: 10px;
+}
+#Puntaje_correcto:hover {
+    background-color: rgb(226, 43, 223);
+    color: white;
+}
+#Puntaje_incorrecto {
+    grid-area: incorrecto;
+    background-color: aqua;
+    border-radius: 10px;
+}
+#Puntaje_incorrecto:hover {
+    background-color: rgb(226, 43, 223);
+    color: white;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.container {
+    text-align: center;
+    font-size: 230%;
+}
+.container > h4 {
+    margin: 2% 0% 0% 0%;
+}
+#Mono_feliz {
+    width: 60%;
+    height: 70%;
+    padding-left: 21%;
+}
+#Mono_triste {
+    width: 60%;
+    height: 70%;
+    padding-left: 21%;
+}
+#De_nuevo {
+    grid-area: boton_1;
+}
+#Inicio {
+    grid-area: boton_2;
+}
+a {
+    text-decoration: none;
+    color: rgb(226, 43, 223);
+}
+a > h2 {
+    margin: 0%;
+}
+.Botones {
+    border-radius: 10px;
+    background-color: aqua;
+    font-size: 84%;
+}
+.Botones:hover {
+    background-color: rgb(226, 43, 223);
+    color: white;
+    transition: 0.5s;
+}
+.Botones:hover > a {
+    color: white;
+}
+
+#Final{
+    display: none; /*Para que no se muestre el Final junto al menu*/
+}
+
+
+@media screen and (max-width:1024px)  {
+    #Menu_h1 {
+        font-size: 400%;
+    }
+
+
+    /*Level 1*/
+    #Pregunta_level1 {
+        font-size: 2.2vh;
+    }
+    .Respuestas1 {
+        font-size: 120%;
+    }
+
+
+    /*Level 2*/
+    #Pregunta_level2 {
+        font-size: 2.2vh;
+    }
+
+    .Respuestas2 {
+        border-radius: 10px;
+        background-color: aqua;
+        color: rgb(226, 43, 223);
+        font-size: 120%;
+    }
+    
+
+    /*Level 3*/
+    #Pregunta_level3 {
+        font-size: 2.5vh;
+    }
+    
+    .Respuestas3 {
+        border-radius: 10px;
+        background-color: aqua;
+        color: rgb(226, 43, 223);
+        font-size: 120%;
+    }
+
+
+    /*Level 4*/
+    #Pregunta_level4 {
+        font-size: 2.2vh;
+    }
+    
+    .Respuestas4 {
+        border-radius: 10px;
+        background-color: aqua;
+        color: rgb(226, 43, 223);
+        font-size: 120%;
+    }
+
+
+    /*Level 5*/
+    #Pregunta_level5 {
+        font-size: 2.2vh;
+    }
+    
+    .Respuestas5 {
+        border-radius: 10px;
+        background-color: aqua;
+        color: rgb(226, 43, 223);
+        font-size: 90%;
+    }
+
+
+    /*Final*/
+    #Final {
+        grid-template-columns: 15% 70% 15%;
+        grid-template-rows: 15% 70% 15%;
+        grid-template-areas: "vacio_a vacio_a vacio_a"
+                             "vacio_m1 puntuacion vacio_m2"
+                             "vacio_b vacio_b vacio_b";
+    }
+    #Puntuacion {
+        grid-area: puntuacion;
+        display: grid;
+        grid-template-columns: 8% 37% 10% 37% 8%;
+        grid-template-rows: 18% 30% 15% 10% 5% 10% 5%;
+    }
+    
+    #Resumen {
+        font-size: 200%;
+    }
+    
+    .container {
+        text-align: center;
+        font-size: 180%;
+    }
+    #Mono_feliz {
+        width: 60%;
+        height: 70%;
+        padding-left: 21%;
+    }
+
+    #Mono_triste {
+        width: 60%;
+        height: 70%;
+        padding-left: 21%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    #Menu_Arriba {
+        grid-area: arriba;
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 100%;
+        grid-template-areas: "izda contenido der" ;
+    }
+    #Menu_h1 {
+        grid-area: contenido;
+        text-align: center;
+        font-size: 300%;
+    }
+    #Menu_Medio {
+        grid-area: medio;
+        display: grid;
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: 100%;
+        grid-template-areas: "no mono none";
+    }
+
+
+    /*Level 1*/
+    #Parte_arriba1 {
+        grid-template-columns: 5% 90% 5%;
+    }
+    #Pregunta_level1 {
+        font-size: 1.8vh;
+    }
+    #Foto_level1 {
+        width: 98.5%;
+    }
+    .Respuestas1 {
+        font-size: 90%;
+    }
+
+
+    /*Level 2*/
+    #Parte_arriba2 {
+        grid-template-columns: 5% 90% 5%;
+    }
+    #Pregunta_level2 {
+        font-size: 1.8vh;
+    }
+    #Foto_level2 {
+        width: 98.5%;
+    }
+    .Respuestas2 {
+        font-size: 90%;
+    }
+
+
+    /*Level 3*/
+    #Parte_arriba3 {
+        grid-template-columns: 5% 90% 5%;
+    }
+    #Pregunta_level3 {
+        font-size: 2vh;
+    }
+    #Foto_level3 {
+        width: 98.5%;
+    }
+    .Respuestas3 {
+        font-size: 90%;
+    }
+
+
+    /*Level 4*/
+    #Parte_arriba4 {
+        grid-template-columns: 5% 90% 5%;
+    }
+    #Pregunta_level4 {
+        font-size: 1.8vh;
+    }
+    #Foto_level4 {
+        width: 98.5%;
+    }
+    .Respuestas4 {
+        font-size: 90%;
+    }
+
+
+    /*Level 5*/
+    #Parte_abajo5 {
+        grid-area: level_abajo;
+        display: grid;
+        grid-template-columns: 12% 35% 6% 35% 12%;
+        grid-template-rows: 5% 20% 5% 20% 5% 20% 5% 20% 5%;
+        grid-template-areas: "vacio3 vacio3 vacio3 vacio3 vacio3"
+                             "vacio4 respuesta1 respuesta1 respuesta1 vacio6"
+                             "vacio4 vacio5 vacio5 vacio5 vacio6"
+                             "vacio4 respuesta2 respuesta2 respuesta2 vacio6"
+                             "vacio4 vacio7 vacio7 vacio7 vacio6"
+                             "vacio4 respuesta3 respuesta3 respuesta3 vacio6"
+                             "vacio4 vacio8 vacio8 vacio8 vacio6"
+                             "vacio4 respuesta4 respuesta4 respuesta4 vacio6"
+                             "vacio4 vacio9 vacio9 vacio9 vacio6";
+    }
+
+    #Parte_arriba5 {
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: 11% 37% 37% 3% 7%;
+    }
+    #Pregunta_level5 {
+        font-size: 1.8vh;
+    }
+    #Foto_level5 {
+        width: 98.5%;
+    }
+    .Respuestas5 {
+        font-size: 65%;
+    }
+
+    
+    /*Final*/
+    #Final {
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: 7% 86% 7%;
+        grid-template-areas: "vacio_a vacio_a vacio_a"
+                             "vacio_m1 puntuacion vacio_m2"
+                             "vacio_b vacio_b vacio_b";
+    }
+    #Puntuacion {
+        grid-area: puntuacion;
+        display: grid;
+        grid-template-columns: 8% 37% 10% 37% 8%;
+        grid-template-rows: 13% 27% 3% 29% 5% 9% 2% 9% 3%;
+        grid-template-areas: "resumen resumen resumen resumen resumen"
+                         "vacio_r1 correcto correcto correcto vacio_r2"
+                         "vacio_r1 vacio_r5 vacio_r5 vacio_r5 vacio_r2"
+                         "vacio_r1 incorrecto incorrecto incorrecto vacio_r2"
+                         "vacio_r1 vacio_r6 vacio_r6 vacio_r6 vacio_r2"
+                         "vacio_r1 boton_1 boton_1 boton_1 vacio_r2"
+                         "vacio_r1 vacio_r7 vacio_r7 vacio_r7 vacio_r2"
+                         "vacio_r1 boton_2 boton_2 boton_2 vacio_r2"
+                         "vacio_r1 vacio_r8 vacio_r8 vacio_r8 vacio_r2";
+    }
+    
+    #Resumen {
+        font-size: 200%;
+    }
+    
+    .container {
+        text-align: center;
+        font-size: 180%;
+    }
+
+    #Mono_feliz {
+        width: 50%;
+        height: 80%;
+        padding-left: 25%;
+    }
+
+    #Mono_triste {
+        width: 50%;
+        height: 70%;
+        padding-left: 25%;
+    }
+}
