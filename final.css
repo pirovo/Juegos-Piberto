@@ -1,0 +1,58 @@
+body {
+    background-image: url(Fotos_Drop_and_venture/Fondo_Drag_and_Drop.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+h1 {
+    font-size: 500%;
+    background-color: rgb(0, 85, 255);
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;}
+
+fieldset{
+    background-color: blue;
+}
+
+fieldset p{
+color: white;
+}
+
+#mensajeFinal {
+    text-align: center;
+}
+img {
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+}
+
+#reiniciar {
+    background-color: rgb(31, 59, 218);
+    padding: 0.5% 0.5%;
+    border-radius: 10%;
+    border: 1px solid rgb(0, 0, 0);
+    font-size: 1.5vw;
+    color: white;
+}
+
+#Menu {
+    background-color: rgb(31, 59, 218);
+    padding: 0.5% 0.5%;
+    border-radius: 10%;
+    border: 1px solid rgb(0, 0, 0);
+    font-size: 1.5vw;
+    color: white;
+}
