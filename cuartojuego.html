@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cuartocss.css">
+    <link rel="icon" type="image/png" href="https://static.vecteezy.com/system/resources/previews/022/443/404/original/joystick-flat-icon-png.png">
+    <title>Pagina de Juegos Piberto</title>
+</head>
+<body onload="pasarANivel4()">
+    <div id="titulo">
+        <fieldset style="background-color: blue; border-color: black;">
+            <h1 style="color: white;">Arrastra donde Corresponde</h1>
+        </fieldset>
+    </div>
+    <br>
+    <div id="primerapregunta">
+        <fieldset style="background-color: blue; border-color: black;">
+            <p style="color: white;">4.¿Cual el nombre de estos tiburones?</p>
+        </fieldset>
+    </div>
+    <br>
+    <div id="contenedorImagenes">
+        <div id="FotoToro" class="imagen" draggable="true" ondragstart="drag(event, 'FotoToro')">
+            <img src="Fotos_Drop_and_venture/Tiburon_toro.png" width="100%">
+        </div>
+        <div id="FotoRoja" class="imagen" draggable="true" ondragstart="drag(event, 'FotoRoja')">
+            <img src="Fotos_Drop_and_venture/Tiburo_pintar.png" width="100%">
+        </div>
+        <div id="FotoBlanco" class="imagen" draggable="true" ondragstart="drag(event, 'FotoBlanco')">
+            <img src="Fotos_Drop_and_venture/Tiburon_blanco.png" width="100%">
+        </div>
+    </div>
+    <div id="contenedorCajas">
+        <div class="caja" id="CajaRoja" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="Fotos_Drop_and_venture/Caja_humilde.png" width="100%"><p style="color: white;">Tiburon Pintaroja</p></div>
+        <div class="caja" id="CajaBlanco" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="Fotos_Drop_and_venture/Caja_humilde.png" width="100%"><p style="color: white;">Tiburon Blanco</p></div>
+        <div class="caja" id="CajaToro" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="Fotos_Drop_and_venture/Caja_humilde.png" width="100%"><p style="color: white;">Tiburon Toro</p></div>
+    </div>
+
+    <div id="Tiempo_level4">
+        <div id="Seg1_level4"></div>
+    </div>
+
+    <button id="botonComprobar" onclick="comprobar()">Comprobar</button>
+    <a href="cuartojuego.html"><button id="reiniciar">Reintentar</button></a>
+
+
+    <script>
+         moverItemId=null;
+
+        function drag(ev, id){
+            moverItemId=id;}
+
+        function allowDrop(ev){
+            ev.preventDefault();}
+
+        function drop(ev){
+            ev.preventDefault();
+            datos=moverItemId;
+            ItemMovido=document.getElementById(datos);
+            ev.target.innerHTML=ItemMovido.outerHTML;
+            ItemMovido.parentNode.removeChild(ItemMovido);}
+
+        function comprobar(){
+            FotoRoja=document.getElementById("FotoRoja");
+            fotoBlanco=document.getElementById("FotoBlanco");
+            fotoToro=document.getElementById("FotoToro");
+            CajaRoja=document.getElementById("CajaRoja");
+            CajaBlanco=document.getElementById("CajaBlanco");
+            CajaToro=document.getElementById("CajaToro");
+
+            if(CajaRoja.contains(FotoRoja.firstChild)&& CajaBlanco.contains(fotoBlanco.firstChild)&& CajaToro.contains(fotoToro.firstChild)){
+                alert("¡Perfecto! Todas las imágenes están en su lugar.");
+                location.href = 'final.html';
+            } else{alert("¡Inténtalo de nuevo! Alguna imagen no está en su lugar.");
+                     location.reload();
+            }
+        }
+
+        //Timer
+        var temporizador_level4;
+
+        function pasarANivel4() {
+            timer_level4();
+        }
+
+        var contador_level4 = 10;
+        var div1_timer4 = document.getElementById('Seg1_level4');
+
+        function timer_level4 () {
+            temporizador_level4 = setInterval (contadorSegundos4, 1000);
+        }
+
+        function contadorSegundos4() {
+            if (contador_level4 >= 0) {
+                div1_timer4.innerHTML='<p>'+contador_level4+'</p>';
+                contador_level4--;
+                if (contador_level4==9){
+                    div1_timer4.style.color="white";
+                }
+                if (contador_level4==4){
+                    div1_timer4.style.color="red";
+                }
+            } else {
+                div1_timer4.innerHTML="";
+                clearInterval(temporizador_level4);
+                location.reload();
+            }
+        }
+    </script>
+</body>
+</html>

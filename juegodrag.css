@@ -1,0 +1,82 @@
+body {
+    background-image: url("Fotos_Drop_and_venture/Fondo_Drag_and_Drop.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#contenedorImagenes {
+    display: flex;
+}
+
+img {
+    width: 200px;
+    height: auto;
+}
+
+#contenedorCajas {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.caja {
+    text-align: center;
+    color: white;
+    margin-top: 10px; 
+}
+
+.caja img {
+    width: 200px;
+    height: auto;
+}
+
+#botonComprobar {
+    background-color: rgb(31, 59, 218);
+    padding: 0.5% 0.5%;
+    border-radius: 10%;
+    border: 1px solid rgb(0, 0, 0);
+    position: absolute;
+    right: 10%;
+    top: 2%;
+    font-size: 1.5vw;
+    color: white;
+}
+
+#reiniciar {
+    background-color: rgb(31, 59, 218);
+    padding: 0.5% 0.5%;
+    border-radius: 10%;
+    border: 1px solid rgb(0, 0, 0);
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    font-size: 1.5vw;
+    color: white;
+}
+
+#botonComprobar:hover,
+#reiniciar:hover {
+    background-color: black;
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+
+/*Timer*/
+#Seg1_level1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
